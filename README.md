@@ -20,15 +20,6 @@ This repository contains a series of small, focused machine coding challenges ai
 
 ## 🧠 Project Structure
 
-```
-
-/machine-coding-tasks
-├── task-01-login-screen
-├── task-02-todo-app
-├── task-03-user-profile
-├── task-04-news-feed
-├── ...
-
 ````
 
 Each folder represents a self-contained task with its own README, components, and logic.
@@ -39,13 +30,13 @@ Each folder represents a self-contained task with its own README, components, an
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/react-native-machine-coding-tasks.git
+git clone https://github.com/Ganesh-16N/machiene_coding.git
 ````
 
 2. Install dependencies:
 
 ```bash
-cd machine-coding-tasks
+cd machine-coding
 npm install
 ```
 
