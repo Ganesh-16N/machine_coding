@@ -30,7 +30,7 @@ Each folder represents a self-contained task with its own README, components, an
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Ganesh-16N/machiene_coding.git
+git clone https://github.com/Ganesh-16N/machine_coding.git
 ````
 
 2. Install dependencies:
@@ -54,31 +54,29 @@ npx react-native run-ios
 
 ## 🧩 Tasks Included
 
-| Task                   | Description                                 | Folder                 |
-| ---------------------- | ------------------------------------------- | ---------------------- |
-| 🔐 Login Screen        | Simple login UI with validation             | `task-01-login-screen` |
-| ✅ ToDo App             | Add/edit/delete tasks                       | `task-02-todo-app`     |
-| 👤 User Profile        | Display and edit profile info               | `task-03-user-profile` |
-| 📰 News Feed           | FlatList of news cards with pull-to-refresh | `task-04-news-feed`    |
-| 📦 More Coming Soon... |                                             |                        |
+| Task               | Description                     | Folder             |
+|--------------------|----------------------------------|--------------------|
+| 🔢 Counter         | Simple counter using state       | `task-01-counter`  |
+| ✅ ToDo App        | Add/edit/delete tasks            | `task-02-todo-app` |
+| 📦 More Coming Soon... |                              |                    |
 
 ---
 
 ## 💡 Contribution
 
-Want to add your own machine coding challenge or improve an existing one?
-Feel free to open a [Pull Request](https://github.com/your-username/react-native-machine-coding-tasks/pulls) or [Issue](https://github.com/your-username/react-native-machine-coding-tasks/issues)!
+Want to add your own machine coding challenge or improve an existing one?  
+Feel free to open a [Pull Request](https://github.com/Ganesh-16N/machine_coding/pulls) or [Issue](https://github.com/Ganesh-16N/machine_coding/issues)!
 
 ---
 
 ## 📸 Screenshots
 
-<!-- Add screenshots here -->
+<!-- Add screenshots to the `screenshots/` folder and update paths below -->
 
 <p float="left">
   <img src="screenshots/login.png" width="200"/>
   <img src="screenshots/todo.png" width="200"/>
-  <img src="screenshots/profile.png" width="200"/>
+  <!-- Add or remove images as needed -->
 </p>
 
 ---
@@ -91,11 +89,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## ✨ Author
 
-Made with ❤️ by Ganesh(https://github.com/Ganesh-16N)
-
-```
-
----
-
-Would you like me to generate this as an actual `README.md` file you can download and edit directly?
-```
+Made with ❤️ by [Ganesh](https://github.com/Ganesh-16N)
