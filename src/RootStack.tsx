@@ -2,8 +2,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen';
-import Counter from './projects/counter/Counter';
-import ToDoApp from './projects/to_do/ToDoApp';
+import Counter from './projects/task-01-counter/Counter';
+import ToDoApp from './projects/task-02-todo-app/ToDoApp';
 
 export default function RootStack() {
   const Stack = createNativeStackNavigator();
