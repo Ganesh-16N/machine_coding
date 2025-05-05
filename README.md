@@ -1,6 +1,3 @@
-Great! To create a beautiful and professional `README.md` file for your React Native project with machine coding tasks, here's a markdown template you can customize and use on GitHub:
-
----
 
 ```markdown
 # 🤖 React Native Machine Coding Tasks
