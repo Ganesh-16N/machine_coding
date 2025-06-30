@@ -9,6 +9,7 @@ export default function HomeScreen() {
   let array = [
     { name: 'Counter', screen: 'Counter' },
     { name: 'To To', screen: 'ToDo' },
+    { name: 'Weather App', screen: 'WeatherApp' },
     { name: 'Project 2', screen: 'Project2' },
     // Add more projects here
 
