@@ -15,11 +15,10 @@ export default function WeatherHomeScreen() {
         try{
             const response  = await axios.get(api)
             setWeatherData(response.data)
-            console.log(weatherData?.weather[0].description)
+            // console.log(weatherData?.weather[0].description)
         } catch (err){
             console.log('error', err)
         }
-
     }
 
 
