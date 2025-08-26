@@ -13,7 +13,8 @@ export default function HomeScreen() {
       screen: 'Counter',
       level: '🟢 Basic',
       description: 'Simple counter with increment/decrement/reset. Practice useState & button handling.',
-      difficulty: 1
+      difficulty: 1,
+      isCompleted: true
     },
     {
       id: '2',
@@ -21,7 +22,8 @@ export default function HomeScreen() {
       screen: 'ToDo',
       level: '🟢 Basic',
       description: 'Add, edit, delete tasks. Local state management with useState.',
-      difficulty: 1
+      difficulty: 1,
+      isCompleted: true
     },
     {
       id: '3',
@@ -29,7 +31,8 @@ export default function HomeScreen() {
       screen: 'Stopwatch',
       level: '🟢 Basic',
       description: 'Start, pause, reset timer. Learn about setInterval, cleanup in useEffect.',
-      difficulty: 1
+      difficulty: 1,
+      isCompleted: false
     },
     {
       id: '4',
@@ -37,7 +40,8 @@ export default function HomeScreen() {
       screen: 'LoginForm',
       level: '🟢 Basic',
       description: 'Email/password validation using Formik + Yup. Error messages below inputs.',
-      difficulty: 1
+      difficulty: 1,
+      isCompleted: false
     },
     {
       id: '5',
@@ -45,7 +49,8 @@ export default function HomeScreen() {
       screen: 'Calculator',
       level: '🟢 Basic',
       description: 'Basic operations (+, -, ×, ÷). Focus on layout (Flexbox) and state updates.',
-      difficulty: 1
+      difficulty: 1,
+      isCompleted: false
     },
     // 🟡 Level 2 – Intermediate
     {
@@ -54,7 +59,8 @@ export default function HomeScreen() {
       screen: 'WeatherApp',
       level: '🟡 Intermediate',
       description: 'Fetch current weather from an API. Show loading, error, and success states.',
-      difficulty: 2
+      difficulty: 2,
+      isCompleted: true
     },
     {
       id: '7',
@@ -62,7 +68,8 @@ export default function HomeScreen() {
       screen: 'ExpenseTracker',
       level: '🟡 Intermediate',
       description: 'Add/remove transactions. Calculate total balance dynamically. Local storage with AsyncStorage.',
-      difficulty: 2
+      difficulty: 2,
+      isCompleted: false
     },
     {
       id: '8',
@@ -70,7 +77,8 @@ export default function HomeScreen() {
       screen: 'MusicPlayer',
       level: '🟡 Intermediate',
       description: 'Show list of songs, play/pause UI (without real audio). Focus on custom components, FlatList.',
-      difficulty: 2
+      difficulty: 2,
+      isCompleted: false
     },
     {
       id: '9',
@@ -78,7 +86,8 @@ export default function HomeScreen() {
       screen: 'NotesApp',
       level: '🟡 Intermediate',
       description: 'CRUD for notes. Search & filter functionality.',
-      difficulty: 2
+      difficulty: 2,
+      isCompleted: false
     },
     {
       id: '10',
@@ -86,7 +95,8 @@ export default function HomeScreen() {
       screen: 'ImageGallery',
       level: '🟡 Intermediate',
       description: 'Fetch images from Unsplash API. Display grid, click to enlarge.',
-      difficulty: 2
+      difficulty: 2,
+      isCompleted: false
     },
     // 🔵 Level 3 – Advanced
     {
@@ -95,7 +105,8 @@ export default function HomeScreen() {
       screen: 'ChatApp',
       level: '🔵 Advanced',
       description: 'Display messages in a chat UI. Add new messages (like WhatsApp).',
-      difficulty: 3
+      difficulty: 3,
+      isCompleted: false
     },
     {
       id: '12',
@@ -103,7 +114,8 @@ export default function HomeScreen() {
       screen: 'ECommerce',
       level: '🔵 Advanced',
       description: 'Fetch products from an API. Show product cards with add-to-cart functionality.',
-      difficulty: 3
+      difficulty: 3,
+      isCompleted: false
     },
     {
       id: '13',
@@ -111,7 +123,8 @@ export default function HomeScreen() {
       screen: 'MovieBooking',
       level: '🔵 Advanced',
       description: 'Select seats, calculate price. Manage seat availability dynamically.',
-      difficulty: 3
+      difficulty: 3,
+      isCompleted: false
     },
     {
       id: '14',
@@ -119,7 +132,8 @@ export default function HomeScreen() {
       screen: 'AuthJWT',
       level: '🔵 Advanced',
       description: 'Login with API call. Save token in AsyncStorage. Show protected screens after login.',
-      difficulty: 3
+      difficulty: 3,
+      isCompleted: false
     },
     {
       id: '15',
@@ -127,7 +141,8 @@ export default function HomeScreen() {
       screen: 'MapLocation',
       level: '🔵 Advanced',
       description: 'Show current location on Google Maps. Update location in real time.',
-      difficulty: 3
+      difficulty: 3,
+      isCompleted: false
     },
     // 🔴 Level 4 – Interview-Level (20 LPA Prep)
     {
@@ -136,7 +151,8 @@ export default function HomeScreen() {
       screen: 'InstagramClone',
       level: '🔴 Interview-Level',
       description: 'Show feed (API or dummy). Like, comment, and add post. Optimized FlatList rendering.',
-      difficulty: 4
+      difficulty: 4,
+      isCompleted: false
     },
     {
       id: '17',
@@ -144,7 +160,8 @@ export default function HomeScreen() {
       screen: 'UberBooking',
       level: '🔴 Interview-Level',
       description: 'Map integration. Select pickup & drop. Fare estimation (dummy).',
-      difficulty: 4
+      difficulty: 4,
+      isCompleted: false
     },
     {
       id: '18',
@@ -152,7 +169,8 @@ export default function HomeScreen() {
       screen: 'MultiStepForm',
       level: '🔴 Interview-Level',
       description: 'Steps: Personal → Bank → Documents. Save progress & restore if user exits.',
-      difficulty: 4
+      difficulty: 4,
+      isCompleted: false
     },
     {
       id: '19',
@@ -160,7 +178,8 @@ export default function HomeScreen() {
       screen: 'FoodDelivery',
       level: '🔴 Interview-Level',
       description: 'Browse restaurants. Add to cart, checkout flow. State management with Redux Toolkit / React Query.',
-      difficulty: 4
+      difficulty: 4,
+      isCompleted: false
     },
     {
       id: '20',
@@ -168,18 +187,123 @@ export default function HomeScreen() {
       screen: 'RealTimeChat',
       level: '🔴 Interview-Level',
       description: 'Login with Google. Real-time messaging. Push notifications.',
-      difficulty: 4
+      difficulty: 4,
+      isCompleted: false
+    },
+    // 🟣 Level 5 – Expert-Level (30+ LPA Prep)
+    {
+      id: '21',
+      name: 'Dashboard Analytics',
+      screen: 'DashboardAnalytics',
+      level: '🟣 Expert-Level',
+      description: 'Comprehensive dashboard with charts, graphs, and real-time analytics data visualization.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '22',
+      name: 'Social Media Feed',
+      screen: 'SocialMediaFeed',
+      level: '🟣 Expert-Level',
+      description: 'Social media feed with infinite scroll, pull-to-refresh, and advanced content interactions.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '23',
+      name: 'E-Learning Platform',
+      screen: 'ELearningPlatform',
+      level: '🟣 Expert-Level',
+      description: 'Comprehensive e-learning platform with courses, video lessons, progress tracking, and assessments.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '24',
+      name: 'Fitness Tracker',
+      screen: 'FitnessTracker',
+      level: '🟣 Expert-Level',
+      description: 'Comprehensive fitness tracking with workout plans, progress charts, and health metrics monitoring.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '25',
+      name: 'Online Banking App',
+      screen: 'OnlineBanking',
+      level: '🟣 Expert-Level',
+      description: 'Secure online banking with account management, transactions, and financial analytics.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '26',
+      name: 'Travel Booking App',
+      screen: 'TravelBooking',
+      level: '🟣 Expert-Level',
+      description: 'Comprehensive travel booking with flights, hotels, car rentals, and itinerary management.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '27',
+      name: 'Job Portal',
+      screen: 'JobPortal',
+      level: '🟣 Expert-Level',
+      description: 'Job portal with listings, application tracking, resume builder, and interview scheduling.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '28',
+      name: 'Real Estate App',
+      screen: 'RealEstateApp',
+      level: '🟣 Expert-Level',
+      description: 'Real estate platform with property listings, virtual tours, mortgage calculator, and agent communication.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '29',
+      name: 'Healthcare App',
+      screen: 'HealthcareApp',
+      level: '🟣 Expert-Level',
+      description: 'Healthcare app with appointment booking, telemedicine, health records, and medication management.',
+      difficulty: 5,
+      isCompleted: false
+    },
+    {
+      id: '30',
+      name: 'Gaming App',
+      screen: 'GamingApp',
+      level: '🟣 Expert-Level',
+      description: 'Interactive gaming app with multiplayer support, leaderboards, achievements, and real-time gameplay.',
+      difficulty: 5,
+      isCompleted: false
     }
   ];
 
   const renderProblemItem = ({ item }: { item: any }) => (
     <TouchableOpacity 
       activeOpacity={0.9} 
-      style={[styles.problemCard, { borderLeftColor: getDifficultyColor(item.difficulty) }]} 
+      style={[
+        styles.problemCard, 
+        { 
+          borderLeftColor: getDifficultyColor(item.difficulty),
+          opacity: item.isCompleted ? 0.7 : 1
+        }
+      ]} 
       onPress={() => navigation.navigate(item.screen)}
     >
       <View style={styles.problemHeader}>
-        <Text style={styles.problemLevel}>{item.level}</Text>
+        <View style={styles.problemHeaderLeft}>
+          <Text style={styles.problemLevel}>{item.level}</Text>
+          {item.isCompleted && (
+            <View style={styles.completedBadge}>
+              <Text style={styles.completedText}>✓ Completed</Text>
+            </View>
+          )}
+        </View>
         <Text style={styles.problemNumber}>#{item.id}</Text>
       </View>
       <Text style={styles.problemTitle}>{item.name}</Text>
@@ -193,14 +317,32 @@ export default function HomeScreen() {
       case 2: return '#eab308'; // Yellow
       case 3: return '#3b82f6'; // Blue
       case 4: return '#ef4444'; // Red
+      case 5: return '#8b5cf6'; // Purple
       default: return '#6b7280';
     }
   };
 
+  const completedCount = problems.filter(problem => problem.isCompleted).length;
+  const totalCount = problems.length;
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>React Native Machine Coding</Text>
-      <Text style={styles.subtitle}>20 Progressive Problems (Basic → 20 LPA Level)</Text>
+      <Text style={styles.subtitle}>30 Progressive Problems (Basic → Expert Level)</Text>
+      
+      <View style={styles.progressContainer}>
+        <Text style={styles.progressText}>
+          Progress: {completedCount}/{totalCount} ({Math.round((completedCount/totalCount) * 100)}%)
+        </Text>
+        <View style={styles.progressBar}>
+          <View 
+            style={[
+              styles.progressFill, 
+              { width: `${(completedCount/totalCount) * 100}%` }
+            ]} 
+          />
+        </View>
+      </View>
       
       <FlatList 
         data={problems}
@@ -230,9 +372,31 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     fontWeight: '500',
-    marginBottom: 24,
+    marginBottom: 16,
     textAlign: 'center',
     color: '#64748b',
+  },
+  progressContainer: {
+    marginBottom: 20,
+    paddingHorizontal: 4,
+  },
+  progressText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1e293b',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  progressBar: {
+    height: 8,
+    backgroundColor: '#e2e8f0',
+    borderRadius: 4,
+    overflow: 'hidden',
+  },
+  progressFill: {
+    height: '100%',
+    backgroundColor: '#22c55e',
+    borderRadius: 4,
   },
   listContainer: {
     paddingBottom: 20,
@@ -255,10 +419,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 8,
   },
+  problemHeaderLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
   problemLevel: {
     fontSize: 12,
     fontWeight: '600',
     color: '#64748b',
+  },
+  completedBadge: {
+    backgroundColor: '#22c55e',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 12,
+  },
+  completedText: {
+    fontSize: 10,
+    fontWeight: '600',
+    color: '#ffffff',
   },
   problemNumber: {
     fontSize: 12,
