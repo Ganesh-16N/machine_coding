@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, FlatList, ScrollView } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { colors, commonStyles } from './theme';
 
 export default function HomeScreen() {
   const navigation = useNavigation<any>();
@@ -32,7 +33,7 @@ export default function HomeScreen() {
       level: '🟢 Basic',
       description: 'Start, pause, reset timer. Learn about setInterval, cleanup in useEffect.',
       difficulty: 1,
-      isCompleted: false
+      isCompleted: true
     },
     {
       id: '4',
@@ -312,14 +313,7 @@ export default function HomeScreen() {
   );
 
   const getDifficultyColor = (difficulty: number) => {
-    switch (difficulty) {
-      case 1: return '#22c55e'; // Green
-      case 2: return '#eab308'; // Yellow
-      case 3: return '#3b82f6'; // Blue
-      case 4: return '#ef4444'; // Red
-      case 5: return '#8b5cf6'; // Purple
-      default: return '#6b7280';
-    }
+    return colors.difficulty[difficulty as keyof typeof colors.difficulty] || colors.text.muted;
   };
 
   const completedCount = problems.filter(problem => problem.isCompleted).length;
@@ -359,7 +353,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 16,
-    backgroundColor: '#f8fafc',
+    backgroundColor: colors.background.primary,
   },
   title: {
     fontSize: 28,
@@ -367,14 +361,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 8,
     textAlign: 'center',
-    color: '#1e293b',
+    color: colors.text.primary,
   },
   subtitle: {
     fontSize: 16,
     fontWeight: '500',
     marginBottom: 16,
     textAlign: 'center',
-    color: '#64748b',
+    color: colors.text.secondary,
   },
   progressContainer: {
     marginBottom: 20,
@@ -383,31 +377,33 @@ const styles = StyleSheet.create({
   progressText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1e293b',
+    color: colors.text.primary,
     marginBottom: 8,
     textAlign: 'center',
   },
   progressBar: {
     height: 8,
-    backgroundColor: '#e2e8f0',
+    backgroundColor: colors.background.tertiary,
     borderRadius: 4,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
-    backgroundColor: '#22c55e',
+    backgroundColor: colors.accent.success,
     borderRadius: 4,
   },
   listContainer: {
     paddingBottom: 20,
   },
   problemCard: {
-    backgroundColor: '#ffffff',
+    backgroundColor: colors.background.card,
     padding: 16,
     borderRadius: 12,
     marginBottom: 12,
     borderLeftWidth: 4,
-    shadowColor: '#000',
+    borderWidth: 1,
+    borderColor: colors.border.primary,
+    shadowColor: colors.shadow.dark,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -427,10 +423,10 @@ const styles = StyleSheet.create({
   problemLevel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
+    color: colors.text.tertiary,
   },
   completedBadge: {
-    backgroundColor: '#22c55e',
+    backgroundColor: colors.accent.success,
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 12,
@@ -438,13 +434,13 @@ const styles = StyleSheet.create({
   completedText: {
     fontSize: 10,
     fontWeight: '600',
-    color: '#ffffff',
+    color: colors.text.primary,
   },
   problemNumber: {
     fontSize: 12,
     fontWeight: '700',
-    color: '#1e293b',
-    backgroundColor: '#e2e8f0',
+    color: colors.text.primary,
+    backgroundColor: colors.background.tertiary,
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 4,
@@ -452,12 +448,12 @@ const styles = StyleSheet.create({
   problemTitle: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#1e293b',
+    color: colors.text.primary,
     marginBottom: 8,
   },
   problemDescription: {
     fontSize: 14,
-    color: '#64748b',
+    color: colors.text.secondary,
     lineHeight: 20,
   },
 });

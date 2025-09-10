@@ -7,9 +7,11 @@ import {
   Button,
   ActivityIndicator,
   Keyboard,
+  TouchableOpacity,
 } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { colors, commonStyles } from '../../theme'
 
 export default function WeatherHomeScreen() {
   const [weatherData, setWeatherData] = useState<any>(null)
@@ -59,13 +61,15 @@ export default function WeatherHomeScreen() {
             }}
             style={styles.input}
           />
-          <Button
-            title="Search"
+          <TouchableOpacity
+            style={styles.searchButton}
             onPress={() => {
               fetchWeather(searchText)
               Keyboard.dismiss()
             }}
-          />
+          >
+            <Text style={styles.searchButtonText}>Search</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Error Message */}
@@ -76,7 +80,7 @@ export default function WeatherHomeScreen() {
         {/* Loading */}
         {loading ? (
           <View style={styles.loaderContainer}>
-            <ActivityIndicator size="large" color="#2196f3" />
+            <ActivityIndicator size="large" color={colors.accent.primary} />
             <Text style={styles.loadingText}>Loading Weather...</Text>
           </View>
         ) : weatherData ? (
@@ -143,7 +147,7 @@ export default function WeatherHomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e3f2fd',
+    backgroundColor: colors.background.primary,
   },
   innerContainer: {
     padding: 16,
@@ -159,11 +163,26 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    padding: 10,
+    padding: 12,
     borderRadius: 10,
-    borderColor: '#ccc',
+    borderColor: colors.input.border,
     borderWidth: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.input.background,
+    color: colors.input.text,
+    fontSize: 16,
+  },
+  searchButton: {
+    backgroundColor: colors.button.primary.background,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 10,
+    minWidth: 80,
+    alignItems: 'center',
+  },
+  searchButtonText: {
+    color: colors.button.primary.text,
+    fontSize: 16,
+    fontWeight: '600',
   },
   loaderContainer: {
     alignItems: 'center',
@@ -172,41 +191,43 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 10,
     fontSize: 16,
-    color: '#555',
+    color: colors.text.secondary,
   },
   errorText: {
-    color: 'red',
+    color: colors.accent.error,
     marginBottom: 20,
     fontSize: 16,
     textAlign: 'center',
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: colors.background.card,
     padding: 20,
     marginTop : 50,
     borderRadius: 20,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: colors.shadow.dark,
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
     elevation: 5,
     gap: 10,
+    borderWidth: 1,
+    borderColor: colors.border.primary,
   },
   cityName: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#2196f3',
+    color: colors.accent.primary,
   },
   temperature: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#333',
+    color: colors.text.primary,
   },
   description: {
     fontSize: 18,
     fontStyle: 'italic',
-    color: '#777',
+    color: colors.text.secondary,
     textTransform: 'capitalize',
     marginBottom: 10,
   },
@@ -222,11 +243,11 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 14,
-    color: '#888',
+    color: colors.text.tertiary,
   },
   value: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333',
+    color: colors.text.primary,
   },
 })

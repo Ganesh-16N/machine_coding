@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen';
+import { colors } from './theme';
 import Counter from './projects/task-01-counter/Counter';
 import ToDoApp from './projects/task-02-todo-app/ToDoApp';
 import WeatherHomeScreen from './projects/task-03-weather-app/WeatherHomeScreen';
@@ -44,16 +45,16 @@ export default function RootStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#1e293b',  
+          backgroundColor: colors.navigation.header,  
         },
-        headerTintColor: '#fff',
+        headerTintColor: colors.text.primary,
         headerTitleAlign: 'center',
         headerTitleStyle: {
           fontWeight: 'bold',
           fontSize: 18,
         },
         contentStyle: {
-          backgroundColor: '#f8fafc',  
+          backgroundColor: colors.background.primary,  
         },
       }}
     >

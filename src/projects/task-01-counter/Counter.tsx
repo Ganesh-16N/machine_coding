@@ -1,12 +1,13 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
+import { colors, commonStyles } from '../../theme'
 
 export default function Counter() {
 
   const [count, setCount] = useState(0)
 
   return (
-    <View>
+    <View style={styles.container}>
 
       <View style={styles.count}>
         <Text style={styles.countText}>
@@ -15,8 +16,8 @@ export default function Counter() {
       </View>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => setCount(count - 1)}><Text style={styles.buttonText}>Decreament -1</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => setCount(count + 1)}><Text style={styles.buttonText}>Increament +1</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => setCount(count - 1)}><Text style={styles.buttonText}>Decrement -1</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => setCount(count + 1)}><Text style={styles.buttonText}>Increment +1</Text></TouchableOpacity>
       </View>
 
     </View>
@@ -24,6 +25,11 @@ export default function Counter() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.background.primary,
+    padding: 20,
+  },
   count: {
     display: 'flex',
     justifyContent: 'center',
@@ -32,7 +38,8 @@ const styles = StyleSheet.create({
   },
   countText: {
     fontWeight: '500',
-    fontSize: 50
+    fontSize: 50,
+    color: colors.text.primary,
   },
   buttonContainer: {
     display: 'flex',
@@ -40,14 +47,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   button: {
-    backgroundColor: 'purple',
-    padding: 5,
-    paddingHorizontal: 15,
-    borderRadius: 5
+    backgroundColor: colors.button.primary.background,
+    padding: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    minWidth: 120,
   },
   buttonText: {
-    color: 'white',
-    fontSize: 18
+    color: colors.button.primary.text,
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
   }
 
 })
